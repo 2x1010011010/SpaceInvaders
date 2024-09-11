@@ -32,3 +32,5 @@
 *.app
 .vs/SpaceInvaders/FileContentIndex/040b1cd4-9856-44db-ba3f-6b26733b3bec.vsidx
 /.vs
+/SpaceInvaders/x64/Debug
+x64/Debug/SpaceInvaders.pdb
