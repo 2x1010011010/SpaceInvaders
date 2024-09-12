@@ -1,5 +1,5 @@
 #include <iostream>
-#include "src\WindowBuilder.h"
+#include "headers/WindowBuilder.h"
 
 using namespace std;
 
