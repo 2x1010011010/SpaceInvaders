@@ -1,4 +1,4 @@
-#include "headers/WindowBuilder.h"
+#include "WindowBuilder.h"
 
 using namespace std;
 
