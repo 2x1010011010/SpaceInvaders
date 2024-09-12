@@ -2,7 +2,7 @@
 
 using namespace std;
 
-WindowBuilder::WindowBuilder() : width(800), height(600), title("Raylib Window"), backgroundColor(RAYWHITE) {};
+WindowBuilder::WindowBuilder() : width(800), height(600), title("Default Window"), backgroundColor(RAYWHITE) {};
 
 WindowBuilder WindowBuilder::SetWidth(int w) {
      width = w;
