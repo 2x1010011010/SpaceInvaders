@@ -34,3 +34,9 @@
 /.vs
 /SpaceInvaders/x64/Debug
 x64/Debug/SpaceInvaders.pdb
+/SpaceInvaders/Debug
+/SpaceInvaders/Debug
+/SpaceInvaders/Debug/SpaceInvaders.tlog
+SpaceInvaders/Debug/SpaceInvaders.tlog/CL.command.1.tlog
+SpaceInvaders/Debug/SpaceInvaders.tlog/CL.read.1.tlog
+SpaceInvaders/Debug/SpaceInvaders.tlog/CL.write.1.tlog
