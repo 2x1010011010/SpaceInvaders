@@ -11,10 +11,10 @@ private:
 public:
     
     WindowBuilder();
-    void SetWidth(int w);
-    void SetHeight(int h);
-    void SetTitle(const char* t);
-    void SetBackgroundColor(Color color);
+    WindowBuilder SetWidth(int w);
+    WindowBuilder SetHeight(int h);
+    WindowBuilder SetTitle(const char* t);
+    WindowBuilder SetBackgroundColor(Color color);
     void Build() const;
     void Run() const;
 };

@@ -4,20 +4,24 @@ using namespace std;
 
 WindowBuilder::WindowBuilder() : width(800), height(600), title("Raylib Window"), backgroundColor(RAYWHITE) {};
 
-void WindowBuilder::SetWidth(int w) {
+WindowBuilder WindowBuilder::SetWidth(int w) {
      width = w;
+     return *this;
 }
 
-void WindowBuilder::SetHeight(int h) {
+WindowBuilder WindowBuilder::SetHeight(int h) {
     height = h;
+    return *this;
 }
 
-void WindowBuilder::SetTitle(const char* t) {
+WindowBuilder WindowBuilder::SetTitle(const char* t) {
     title = t;
+    return *this;
 }
 
-void WindowBuilder::SetBackgroundColor(Color color) {
+WindowBuilder WindowBuilder::SetBackgroundColor(Color color) {
     backgroundColor = color;
+    return *this;
 }
 
 void WindowBuilder::Build() const {
@@ -28,6 +32,9 @@ void WindowBuilder::Build() const {
 void WindowBuilder::Run() const {
    while (!WindowShouldClose()) {
        ClearBackground(backgroundColor);
+       DrawText("Hello, Raylib!", width / 2 - MeasureText("Hello, Raylib!", 20) / 2, height / 2 - 10, 20, DARKGRAY);
+
+       EndDrawing();
    }
    CloseWindow();
 }
