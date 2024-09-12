@@ -12,7 +12,13 @@ int main() {
           .SetBackgroundColor(BLACK)
           .Build();
 
-    window.Run();
+    while (!WindowShouldClose()) {
+    
+        BeginDrawing();
+        EndDrawing();
+    }
+
+    window.Close();
 
     return 0;
 }

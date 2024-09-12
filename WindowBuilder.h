@@ -9,7 +9,7 @@ public:
     WindowBuilder SetTitle(const char* t);
     WindowBuilder SetBackgroundColor(Color color);
     void Build() const;
-    void Run() const;
+    void Close();
 
 private:
     int width;

@@ -29,12 +29,6 @@ void WindowBuilder::Build() const {
     SetTargetFPS(60);
 }
 
-void WindowBuilder::Run() const {
-   while (!WindowShouldClose()) {
-       ClearBackground(backgroundColor);
-       DrawText("Hello, Raylib!", width / 2 - MeasureText("Hello, Raylib!", 20) / 2, height / 2 - 10, 20, DARKGRAY);
-
-       EndDrawing();
-   }
+void WindowBuilder::Close() {
    CloseWindow();
 }
