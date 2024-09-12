@@ -1,17 +1,18 @@
-#include "WindowBuilder.h"
+#pragma once
+#include "raylib.h"
+#include <cstring>
 
-using namespace std;
-
-class WindowBuilder{
+class WindowBuilder {
 private:
     int width;
     int height;
-    std::string title;
+    const char* title;
     Color backgroundColor;
 
 public:
+    
     WindowBuilder() : width(800), height(600), title("Default window"), backgroundColor(RAYWHITE) {}
-
+    
     WindowBuilder& setWidth(int w) {
         width = w;
         return *this;
@@ -22,7 +23,7 @@ public:
         return *this;
     }
 
-    WindowBuilder& setTitle(std::string t) {
+    WindowBuilder& setTitle(const char* t) {
         title = t;
         return *this;
     }
@@ -32,6 +33,8 @@ public:
         return *this;
     }
 
+    
+
     void build() const {
         InitWindow(width, height, title);
         SetTargetFPS(60);
@@ -40,7 +43,6 @@ public:
     void run() const {
         while (!WindowShouldClose()) {
             ClearBackground(backgroundColor);
-
         }
 
         CloseWindow();
