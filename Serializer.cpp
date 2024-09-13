@@ -1,6 +1,6 @@
 #include "Serializer.h"
 
-static json LoadFromJson(const std::string& filepath) {
+json Serializer::LoadFromJson(const std::string& filepath) {
     std::ifstream file(filepath);
     if (!file.is_open()) {
         throw std::runtime_error("Unable to open JSON file: " + filepath);
@@ -8,4 +8,4 @@ static json LoadFromJson(const std::string& filepath) {
     json j;
     file >> j;
     return j;
-}
+};
