@@ -7,6 +7,7 @@ using json = nlohmann::json;
 
 class Serializer
 {
-
+public:
+	static json LoadFromJson(const std::string& filepath);
 };
 
