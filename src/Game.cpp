@@ -10,11 +10,7 @@ class Game {
 
     Game::Game() {
 
-        window.SetWidth(1024)
-            .SetHeight(768)
-            .SetTitle("Space Invadors C++")
-            .SetBackgroundColor(BLACK)
-            .Build();
+        window.Build();
     }
 
     void Run() {
