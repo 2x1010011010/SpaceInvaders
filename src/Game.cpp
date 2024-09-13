@@ -1,24 +1,49 @@
 #include <iostream>
 #include "WindowBuilder.h"
+#include "Game.h"
 
 using namespace std;
 
-int main() {
-    WindowBuilder window;
-    
-    window.SetWidth(1024)
-          .SetHeight(768)
-          .SetTitle("Space Invadors C++")
-          .SetBackgroundColor(BLACK)
-          .Build();
+class Game {
 
-    while (!WindowShouldClose()) {
-    
-        BeginDrawing();
-        EndDrawing();
+    WindowBuilder window;
+
+    Game::Game() {
+
+        window.SetWidth(1024)
+            .SetHeight(768)
+            .SetTitle("Space Invadors C++")
+            .SetBackgroundColor(BLACK)
+            .Build();
     }
 
-    window.Close();
+    void Run() {
+
+        while (!WindowShouldClose()) {
+            Update();
+            Draw();
+        }
+
+        window.Close();
+    }
+
+    void Update() {
+    
+    }
+
+    void Draw() {
+    
+    }
+
+    ~Game() {
+    
+    }
+};
+
+int main() {
+   
+    Game game;
+    game.Run();
 
     return 0;
 }
