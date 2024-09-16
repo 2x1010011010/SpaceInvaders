@@ -127,14 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Entity.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Position.cpp" />
-    <ClCompile Include="Serializer.cpp" />
-    <ClCompile Include="WindowBuilder.cpp" />
+    <ClCompile Include="src/Entity.cpp" />
+    <ClCompile Include="src/Game.cpp" />
+    <ClCompile Include="src/Position.cpp" />
+    <ClCompile Include="src/Serializer.cpp" />
+    <ClCompile Include="src/WindowBuilder.cpp" />
+    <ClCompile Include="src/main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Serializer.h" />
+    <ClInclude Include="../headers/Serializer.h" />
+    <ClInclude Include="../headers/Entity.h" />
+    <ClInclude Include="../headers/Game.h" />
+    <ClInclude Include="../headers/Position.h" />
+    <ClInclude Include="../headers/WindowBuilder.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

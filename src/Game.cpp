@@ -1,45 +1,34 @@
 #include <iostream>
-#include "WindowBuilder.h"
-#include "Game.h"
+#include "../headers/WindowBuilder.h"
+#include "../headers/Game.h"
 
 using namespace std;
 
-class Game {
+WindowBuilder window;
 
-    WindowBuilder window;
-
-    Game::Game() {
-
-        window.Build();
-    }
-
-    void Run() {
-
-        while (!WindowShouldClose()) {
-            Update();
-            Draw();
-        }
-
-        window.Close();
-    }
-
-    void Update() {
+Game::Game() {
     
+    window.Build();
+}
+
+void Game::Run() {
+
+    while (!WindowShouldClose()) {
+        Update();
+        Draw();
     }
 
-    void Draw() {
+    window.Close();
+}
+
+void Game::Update() {
     
-    }
+}
 
-    ~Game() {
+void Game::Draw() {
+
+}
+
+Game::~Game() {
     
-    }
-};
-
-int main() {
-   
-    Game game;
-    game.Run();
-
-    return 0;
 }

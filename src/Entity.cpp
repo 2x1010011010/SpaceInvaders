@@ -1,4 +1,4 @@
-#include "Entity.h"
+#include "../headers/Entity.h"
 
 Entity::Entity(Position pos) : position(pos) {};
 
