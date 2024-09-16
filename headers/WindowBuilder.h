@@ -1,6 +1,7 @@
 #pragma once
 #include "raylib.h"
 #include "../lib/single_include/nlohmann/json.hpp"
+#include "../headers/Serializer.h"
 
 using json = nlohmann::json;
 

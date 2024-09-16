@@ -4,10 +4,11 @@
 
 using namespace std;
 
+Serializer serializer;
 WindowBuilder window;
 
 Game::Game() {
-    
+    window.SetFromJson(serializer.LoadFromJson("configs/window.json"));
     window.Build();
 }
 
