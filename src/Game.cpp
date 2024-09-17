@@ -1,14 +1,10 @@
 #include <iostream>
-#include "../headers/WindowBuilder.h"
 #include "../headers/Game.h"
 
 using namespace std;
 
-Serializer serializer;
-WindowBuilder window;
-
 Game::Game() {
-    window.SetFromJson(serializer.LoadFromJson("configs/window.json"));
+    window.SetFromJson(Serializer::LoadFromJson(windowConfig));
     window.Build();
 }
 
@@ -23,7 +19,7 @@ void Game::Run() {
 }
 
 void Game::Update() {
-    
+
 }
 
 void Game::Draw() {
@@ -31,5 +27,5 @@ void Game::Draw() {
 }
 
 Game::~Game() {
-    
+
 }

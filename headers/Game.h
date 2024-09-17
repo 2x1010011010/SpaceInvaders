@@ -1,8 +1,10 @@
 #pragma once
-#ifndef GAME_H
-#define GAME_H
+#include "../headers/WindowBuilder.h"
 
 class Game{
+private:
+	WindowBuilder window;
+	const std::string windowConfig = "configs/window.json";
 public:
 	Game();
 	void Run();
@@ -10,4 +12,3 @@ public:
 	void Draw();
 	~Game();
 };
-#endif
