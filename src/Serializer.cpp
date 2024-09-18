@@ -14,6 +14,7 @@ public:
         }
         json j;
         file >> j;
+        file.close();
         return j;
     };
 };
