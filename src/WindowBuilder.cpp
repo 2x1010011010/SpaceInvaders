@@ -14,6 +14,11 @@ void WindowBuilder::Build() const {
     SetTargetFPS(60);
 }
 
+void WindowBuilder::Draw() {
+    BeginDrawing();
+    EndDrawing();
+}
+
 void WindowBuilder::Close() {
    CloseWindow();
 }

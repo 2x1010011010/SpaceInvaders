@@ -12,17 +12,13 @@ void Game::Run() {
 
     while (!WindowShouldClose()) {
         Update();
-        Draw();
+        window.Draw();
     }
 
     window.Close();
 }
 
 void Game::Update() {
-
-}
-
-void Game::Draw() {
 
 }
 
