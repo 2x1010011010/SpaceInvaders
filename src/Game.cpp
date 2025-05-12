@@ -22,6 +22,10 @@ void Game::Update() {
 
 }
 
+void Game::Draw() {
+
+}
+
 Game::~Game() {
 
 }

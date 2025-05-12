@@ -3,8 +3,11 @@
 
 class Player : public Entity
 {
-public:
-	Position position;
-	Player(Position pos);
-	~Player();
+	public:
+		Player(Position pos);
+		~Player();
+		void Draw();
+		void Shoot();
+	private:
+
 };
