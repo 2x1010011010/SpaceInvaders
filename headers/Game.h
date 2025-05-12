@@ -14,5 +14,5 @@ class Game{
 	private:
 		WindowBuilder window;
 		Player player;
-		const std::string windowConfig = "D:/C++ Projects/SpaceInvaders/configs/window.json";
+		const std::string windowConfig = "../configs/window.json";
 };

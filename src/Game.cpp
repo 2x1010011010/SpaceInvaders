@@ -7,7 +7,7 @@ Game::Game() {
     json config = Serializer::LoadFromJson(windowConfig);
     window.SetFromJson(config);
     window.Build();
-    Vector2 pos = { config["playerStartPosX"], config["playerStartPosY"] };
+    Vector2 pos = { config.value("playerStartPosX", 100), config.value("playerStartPosY", 100) };
     player.SetPosition(pos);
 }
 
