@@ -13,4 +13,5 @@ class Player : public Entity
 
 	private:
 		Texture2D image;
+		const std::string pathToImage = "../graphics/spaceship.png";
 };
