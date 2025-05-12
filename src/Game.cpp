@@ -9,7 +9,6 @@ Game::Game() {
     window.Build();
     Vector2 pos = { config["playerStartPosX"], config["playerStartPosY"] };
     player.SetPosition(pos);
-    player.Draw();
 }
 
 void Game::Run() {
@@ -17,6 +16,7 @@ void Game::Run() {
     while (!WindowShouldClose()) {
         Update();
         window.Draw();
+        player.Draw();
     }
 
     window.Close();
