@@ -9,7 +9,6 @@ public:
     void SetFromJson(const json& config);
     void Build() const;
     void Close();
-
     int GetWidth() const;
     int GetHeight() const;
     Color GetBackgroundColor() const;
@@ -17,6 +16,7 @@ public:
 private:
     int width;
     int height;
-    const char* title;
+    std::string titleStr;      
+    const char* title;         
     Color backgroundColor;
 };

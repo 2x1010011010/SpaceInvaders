@@ -7,10 +7,11 @@ WindowBuilder::WindowBuilder() : width(800), height(600), title("Space Invaders"
 void WindowBuilder::SetFromJson(const json& config) {
     width = config.value("width", 800);
     height = config.value("height", 600);
+    titleStr = config.value("title", "Space Invaders");
 }
 
 void WindowBuilder::Build() const {
-    InitWindow(width, height, title);
+    InitWindow(width, height, titleStr.c_str());
     SetTargetFPS(60);
 }
 

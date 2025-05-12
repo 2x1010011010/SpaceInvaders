@@ -3,9 +3,11 @@
 #include <raylib.h>
 
 Player::Player() {
-    image = LoadTexture(pathToImage);
-    if (image.width == 0 || image.height == 0) {
-        std::cerr << "Failed to load texture: " << pathToImage << std::endl;
+    std::cout << "Loading player texture from: " << pathToImage << std::endl;
+    image = LoadTexture(pathToImage.c_str());
+
+    if (image.id == 0) {
+        std::cerr << "ERROR: Failed to load texture!" << std::endl;
     }
 }
 

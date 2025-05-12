@@ -1,6 +1,7 @@
 {
   "width": 1024,
   "height": 768,
+  "title": "Space Invaders v 0.1.13",
   "playerStartPosX": 100,
   "playerStartPosY": 100
 }
