@@ -1,14 +1,13 @@
-#include "../headers/Position.h"
+#include <raylib.h>
 
 class Entity
 {
 	public:
-		Position position;
+		Vector2 position;
 		Entity();
-		Entity(Position position);
-		Entity(float x, float y);
+		Entity(Vector2 position);
 		~Entity();
-		void Move(Position position);
+		void Move(Vector2 position);
 		void Move(float x, float y);
 };
 
