@@ -7,8 +7,8 @@ Game::Game() {
         window.SetFromJson(config);
         window.Build();
 
-        Vector2 pos = { config.value("playerStartPosX", 100.0f), config.value("playerStartPosY", 100.0f) };
-        player.SetPosition(pos);
+        //Vector2 pos = { config.value("playerStartPosX", 100.0f), config.value("playerStartPosY", 100.0f) };
+        //player.SetPosition(pos);
     }
     catch (const std::exception& e) {
         std::cerr << "Error loading config: " << e.what() << std::endl;
@@ -18,11 +18,7 @@ Game::Game() {
 void Game::Run() {
     while (!WindowShouldClose()) {
         Update();
-
-        BeginDrawing();
-        ClearBackground(window.GetBackgroundColor());
         Draw();
-        EndDrawing();
     }
 
     window.Close();
@@ -33,7 +29,8 @@ void Game::Update() {
 }
 
 void Game::Draw() {
-    player.Draw();
+    window.Draw();
+    //player.Draw();
 }
 
 Game::~Game() {}

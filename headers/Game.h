@@ -1,6 +1,7 @@
 #pragma once
 #include "../headers/WindowBuilder.h"
 #include "../headers/Player.h"
+#include <raylib.h>
 
 class Game {
 public:
@@ -13,5 +14,5 @@ public:
 private:
     WindowBuilder window;
     Player player;
-    const std::string windowConfig = "../configs/window.json";
+    const std::string windowConfig = "D:/C++ Projects/SpaceInvaders/configs/window.json";
 };
