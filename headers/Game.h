@@ -1,18 +1,17 @@
 #pragma once
 #include "../headers/WindowBuilder.h"
-#include "../headers/player.h"
+#include "../headers/Player.h"
 
+class Game {
+public:
+    Game();
+    void Run();
+    void Update();
+    void Draw();
+    ~Game();
 
-class Game{
-	public:
-		Game();
-		void Run();
-		void Update();
-		void Draw();
-		~Game();
-
-	private:
-		WindowBuilder window;
-		Player player;
-		const std::string windowConfig = "../configs/window.json";
+private:
+    WindowBuilder window;
+    Player player;
+    const std::string windowConfig = "../configs/window.json";
 };

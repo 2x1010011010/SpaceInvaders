@@ -2,7 +2,7 @@
 
 using namespace std;
 
-WindowBuilder::WindowBuilder() : width(800), height(600), title("Space Invaders"), backgroundColor(RAYWHITE) {};
+WindowBuilder::WindowBuilder() : width(800), height(600), title("Space Invaders"), backgroundColor(RAYWHITE) {}
 
 void WindowBuilder::SetFromJson(const json& config) {
     width = config.value("width", 800);
@@ -14,11 +14,10 @@ void WindowBuilder::Build() const {
     SetTargetFPS(60);
 }
 
-void WindowBuilder::Draw() {
-    BeginDrawing();
-    EndDrawing();
+void WindowBuilder::Close() {
+    CloseWindow();
 }
 
-void WindowBuilder::Close() {
-   CloseWindow();
-}
+int WindowBuilder::GetWidth() const { return width; }
+int WindowBuilder::GetHeight() const { return height; }
+Color WindowBuilder::GetBackgroundColor() const { return backgroundColor; }

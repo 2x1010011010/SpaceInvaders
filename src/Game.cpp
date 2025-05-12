@@ -1,35 +1,34 @@
 #include <iostream>
 #include "../headers/Game.h"
 
-using namespace std;
-
 Game::Game() {
     json config = Serializer::LoadFromJson(windowConfig);
     window.SetFromJson(config);
     window.Build();
-    Vector2 pos = { config.value("playerStartPosX", 100), config.value("playerStartPosY", 100) };
+
+    Vector2 pos = { config.value("playerStartPosX", 100.0f), config.value("playerStartPosY", 100.0f) };
     player.SetPosition(pos);
 }
 
 void Game::Run() {
-
     while (!WindowShouldClose()) {
         Update();
-        window.Draw();
-        player.Draw();
+
+        BeginDrawing();
+        ClearBackground(window.GetBackgroundColor());
+        Draw();
+        EndDrawing();
     }
 
     window.Close();
 }
 
 void Game::Update() {
-
+    // Логика игры
 }
 
 void Game::Draw() {
-
+    player.Draw();
 }
 
-Game::~Game() {
-
-}
+Game::~Game() {}
