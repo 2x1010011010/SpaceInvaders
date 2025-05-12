@@ -1,5 +1,7 @@
 #pragma once
 #include "../headers/Entity.h"
+#include <iostream>
+#include <raylib.h>
 #include <string>
 
 class Player : public Entity {

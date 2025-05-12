@@ -10,13 +10,8 @@ void WindowBuilder::SetFromJson(const json& config) {
 }
 
 void WindowBuilder::Build() const {
-    InitWindow(width, height, titleStr.c_str());
+    InitWindow(width, height, "SpaceInvaders v1.0");
     SetTargetFPS(60);
-}
-
-void WindowBuilder::Draw() {
-    BeginDrawing();
-    EndDrawing();
 }
 
 void WindowBuilder::Close() {

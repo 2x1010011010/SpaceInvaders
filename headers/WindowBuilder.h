@@ -10,7 +10,6 @@ public:
     void SetFromJson(const json& config);
     void Build() const;
     void Close();
-    void Draw();
     int GetWidth() const;
     int GetHeight() const;
     Color GetBackgroundColor() const;

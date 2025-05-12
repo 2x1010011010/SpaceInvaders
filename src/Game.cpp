@@ -29,8 +29,10 @@ void Game::Update() {
 }
 
 void Game::Draw() {
-    window.Draw();
-    //player.Draw();
+    BeginDrawing();
+
+
+    EndDrawing();
 }
 
 Game::~Game() {}
