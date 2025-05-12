@@ -5,8 +5,9 @@
 class Player : public Entity
 {
 	public:
-		Player(Vector2 pos);
+		Player();
 		~Player();
+		void SetPosition(Vector2 pos)
 		void Draw();
 		void Shoot();
 

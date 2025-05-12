@@ -4,8 +4,12 @@
 using namespace std;
 
 Game::Game() {
-    window.SetFromJson(Serializer::LoadFromJson(windowConfig));
+    json config = Serializer::LoadFromJson(windowConfig);
+    window.SetFromJson(config);
     window.Build();
+    Vector2 pos = { config["playerStartPosX"], config["playerStartPosY"] };
+    player.SetPosition(pos);
+    player.Draw();
 }
 
 void Game::Run() {

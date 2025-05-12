@@ -1,8 +1,11 @@
 #include "../headers/Player.h"
 
-Player::Player(Vector2 pos) {
-	position = pos;
+Player::Player() {
 	image = LoadTexture("graphics/spaceship.png");
+}
+
+void Player::SetPosition(Vector2 pos) {
+	position = pos;
 }
 
 void Player::Draw() {
